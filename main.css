@@ -16,6 +16,10 @@ body {
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 body {
   background-image: url("images/background.jpg");
   background-size: cover;
