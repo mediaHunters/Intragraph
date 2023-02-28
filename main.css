@@ -38,7 +38,7 @@ body {
   bottom: 0;
   z-index: 9999;
   background-image: url("images/background.jpg");
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -71,11 +71,11 @@ nav {
   top: 0;
 }
 
-
 .top-image-wrapper {
-  width: 100%;
+  width: 65%;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .top-image {
@@ -85,7 +85,16 @@ nav {
 
 @media only screen and (max-width: 768px) {
   .top-image {
-    width: 65%;
+    width: 45%;
+  }
+}
+
+@media (orientation: landscape) {
+  .top-image {
+    width: 35%;
+  }
+  .menu {
+    margin-bottom: 0;
   }
 }
 
@@ -113,7 +122,6 @@ nav {
   }
 }
 
-
 .scroll-text-wrapper {
   display: flex;
   justify-content: center;
@@ -123,6 +131,7 @@ nav {
   font-size: 36px;
   position: relative;
   opacity: 1;
+  pointer-events: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -146,12 +155,16 @@ nav {
 
 @media only screen and (max-width: 768px) {
   .scroll-text {
-  font-size: 14px;
+    font-size: 14px;
   }
 }
 
-
-
+@media (orientation: landscape) {
+  .scroll-text {
+    top: unset;
+    bottom: 30%;
+  }
+}
 
 .article-text {
   font-family: Sitka;
@@ -169,8 +182,6 @@ nav {
   }
 }
 
-
-
 .article-text p {
   font-size: 24px;
 }
@@ -182,7 +193,6 @@ nav {
 .is-hidden {
   opacity: 0;
 }
-
 
 .contact-box {
   margin: 0 auto;
@@ -197,24 +207,20 @@ nav {
 }
 
 @media only screen and (max-width: 1024px) {
-.contact-box {
-  padding: 10px;
-}
+  .contact-box {
+    padding: 10px;
+  }
   .contact-box-text {
     font-size: 20px;
   }
 }
-
-
 
 .contact-box-wrapper {
   height: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-
 
 /* ============================================================== */
 
@@ -238,18 +244,23 @@ nav {
   margin-right: 40px;
 }
 
-.menu-items li a:link, .menu-items li a:visited {
+.menu-items li a:link,
+.menu-items li a:visited {
   text-decoration: none;
-  color: #fff;  
+  color: #fff;
   font-family: Sitka;
   font-size: 24px;
 }
 
-@media (max-width: 768px) {
+.menu-wrapper {
+  margin-bottom: 40px;
+}
 
-  .menu-items li a:link, .menu-items li a:visited{
-    color: #303030;
+@media (max-width: 768px) {
+  .menu-wrapper {
+    margin-bottom: 10px;
   }
+
 
   .menu-toggle {
     display: block;
@@ -281,5 +292,11 @@ nav {
   .menu-items.show {
     display: flex;
     flex-direction: column;
+    background-color: #3F3035;
+  }
+
+  .menu-items li a:link,
+  .menu-items li a:visited {
+    color: aliceblue;
   }
 }
