@@ -228,14 +228,6 @@ nav {
   position: relative;
 }
 
-@media only screen and (max-width: 1024px) {
-  .contact-box {
-    padding: 30px;
-  }
-  .contact-box > p {
-    font-size: 16px;
-  }
-}
 
 .contact-box-wrapper {
   height: 60%;
@@ -341,5 +333,14 @@ nav {
     width: 65%;
     justify-self: center;
     padding-left: 70px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .contact-box {
+    padding: 0 30px 30px 30px;
+  }
+  .contact-box > p {
+    font-size: 16px;
   }
 }
