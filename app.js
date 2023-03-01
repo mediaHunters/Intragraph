@@ -4,24 +4,33 @@ let scrollPos = 0;
 const textWrapper = document.querySelector(".scroll-text-wrapper");
 const text = document.querySelector(".scroll-text");
 const textBox = document.querySelector(".main-content");
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
 
-const bottomLineValue =
-  textWrapper && (textWrapper.scrollTop + textWrapper.clientHeight) / 3;
+let bottomLineValue;
 
-window.addEventListener("load", () => {
+
+if (window.innerWidth > 768) {
+  bottomLineValue = textWrapper && (textWrapper.scrollTop + textWrapper.clientHeight) / 4;
+} else {
+bottomLineValue = textWrapper && (textWrapper.scrollTop + textWrapper.clientHeight) / 3;
+
+}
+
+
+window.addEventListener("click", () => {
   setTimeout(() => {
     const loader = document.querySelector(".loader-container");
+    loader.classList.add("hide-loader");
     if (loader) {
-      loader.classList.add("hide-loader");
       setTimeout(() => {
         loader.remove();
-      }, 2000);
+      }, 1000);
     }
   }, 2000);
 });
 
-const menuToggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector("nav");
+
 
 menuToggle.addEventListener("click", () => {
   nav.classList.toggle("active");
