@@ -11,12 +11,13 @@ let bottomLineValue;
 
 
 if (window.innerWidth > 768) {
-  bottomLineValue = textWrapper && (textWrapper.scrollTop + textWrapper.clientHeight) / 4;
-} else {
-bottomLineValue = textWrapper && (textWrapper.scrollTop + textWrapper.clientHeight) / 3;
-
-}
-
+  bottomLineValue =
+    textWrapper && (textWrapper.scrollTop + textWrapper.clientHeight) / 4;
+} 
+ if (window.orientation === 0) {
+  bottomLineValue =
+    textWrapper && (textWrapper.scrollTop + textWrapper.clientHeight) / 2;
+} 
 
 window.addEventListener("click", () => {
   setTimeout(() => {
