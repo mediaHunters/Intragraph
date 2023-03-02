@@ -239,6 +239,7 @@ nav {
     background: none;
     cursor: pointer;
     color: #ccc2b8;
+    z-index: 10;
   }
 
   .menu-items {
@@ -263,6 +264,7 @@ nav {
     background-color: #3f3035;
     align-items: center;
     justify-content: center;
+    z-index: 1;
   }
 }
 
