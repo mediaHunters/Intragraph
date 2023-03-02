@@ -311,3 +311,9 @@ nav {
     font-size: 14px;
   }
 }
+
+@media only screen and (max-width: 375px) {
+  .menu {
+    margin-right: 12px;
+  }
+}
