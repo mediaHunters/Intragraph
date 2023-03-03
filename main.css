@@ -147,6 +147,7 @@ nav {
   .scroll-text {
     top: unset;
     bottom: 30%;
+    font-size: 18px;
   }
 }
 
@@ -170,7 +171,7 @@ nav {
 
 .contact-box {
   margin: 0 auto;
-  max-width: 950px;
+  max-width: 70%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -271,7 +272,7 @@ nav {
 @media only screen and (min-width: 1024px) {
   .article-text > p {
     margin-bottom: 40px;
-    font-size: 16px;
+    font-size: 24px;
   }
 
   .main-content {
