@@ -144,7 +144,7 @@ nav {
 }
 
 .contact-header {
-  font-size: 16px;
+  font-size: 24px;
 }
 
 @media (orientation: landscape) and (max-width:1024px) {
@@ -154,7 +154,9 @@ nav {
     font-size: 18px;
   }
 
-
+  .contact-header {
+    font-size: 16px;
+  }
 }
 
 .article-text {
