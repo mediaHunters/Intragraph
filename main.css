@@ -304,7 +304,6 @@ nav {
     order: 0;
     width: min(50vw, 200px);
     justify-self: center;
-    padding-left: 80px;
   }
 
   .scroll-text {
