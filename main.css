@@ -191,10 +191,6 @@ nav {
   position: relative;
 }
 
-.contact-box > p {
-  text-align: justify;
-}
-
 .contact-box-wrapper {
   height: 60%;
   display: flex;
