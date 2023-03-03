@@ -143,12 +143,18 @@ nav {
   margin: 0 auto;
 }
 
+.contact-header {
+  font-size: 16px;
+}
+
 @media (orientation: landscape) and (max-width:1024px) {
   .scroll-text {
     top: unset;
     bottom: 30%;
     font-size: 18px;
   }
+
+
 }
 
 .article-text {
@@ -226,9 +232,6 @@ nav {
 }
 
 @media only screen and (max-width: 1024px) {
-  .contact-box {
-    padding: 0 30px 30px 30px;
-  }
   .contact-box > p {
     font-size: 16px;
   }
@@ -285,7 +288,7 @@ nav {
 }
 
 @media only screen and (max-width: 820px) {
-  .main-content {
+  .main-content{
     padding: 50px;
     padding-bottom: 120px;
   }
