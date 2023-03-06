@@ -9,7 +9,6 @@ const nav = document.querySelector("nav");
 
 let bottomLineValue;
 
-
 if (window.innerWidth > 768) {
   bottomLineValue =
     textWrapper && (textWrapper.scrollTop + textWrapper.clientHeight) / 4;
@@ -17,11 +16,10 @@ if (window.innerWidth > 768) {
  if (window.orientation === 0) {
   bottomLineValue =
     textWrapper && (textWrapper.scrollTop + textWrapper.clientHeight) / 2;
-} else {
+}  else {
   bottomLineValue =
   textWrapper && (textWrapper.scrollTop + textWrapper.clientHeight) / 5;
 }
-
 
 window.addEventListener('resize', function() {
   if (window.innerWidth > 768) {
@@ -61,6 +59,15 @@ window.addEventListener("click", () => {
   }
 });
 
+window.addEventListener("wheel", function () {
+  const loader = document.querySelector(".loader-container");
+  if (loader) {
+    loader.classList.add("hide-loader");
+    setTimeout(() => {
+      loader.remove();
+    }, 1500);
+  }
+}, false);
 
 menuToggle.addEventListener("click", () => {
   nav.classList.toggle("active");
