@@ -69,6 +69,16 @@ window.addEventListener("wheel", function () {
   }
 }, false);
 
+window.addEventListener("touchstart", function () {
+  const loader = document.querySelector(".loader-container");
+  if (loader) {
+    loader.classList.add("hide-loader");
+    setTimeout(() => {
+      loader.remove();
+    }, 1500);
+  }
+}, false);
+
 menuToggle.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
