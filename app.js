@@ -70,6 +70,7 @@ window.addEventListener("wheel", function () {
 }, false);
 
 window.addEventListener("touchstart", function () {
+  console.log('qwew')
   const loader = document.querySelector(".loader-container");
   if (loader) {
     loader.classList.add("hide-loader");
@@ -103,3 +104,20 @@ const menuItems = document.querySelector(".menu-items");
 menuToggle1.addEventListener("click", () => {
   menuItems.classList.toggle("show");
 });
+
+
+window.addEventListener(
+  "load",
+  function () {
+    if (window.matchMedia("(max-width: 820px)").matches) {
+      const loader = document.querySelector(".loader-container");
+      if (loader) {
+        loader.classList.add("hide-loader");
+        setTimeout(() => {
+          loader.remove();
+        }, 1500);
+      }
+    }
+  },
+  false
+);
